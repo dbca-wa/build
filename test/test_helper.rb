@@ -5,16 +5,14 @@ require "riot"
 require "mocha"
 require "json"
 require "rake"
-
 require "warden"
-require "warden_odkbuild"
 
-require 'model/connection_manager'
-require "model/user.rb"
-require "model/form.rb"
-
-require 'config_manager'
-require "odkbuild_server"
+require_relative "../server/warden_odkbuild"
+require_relative "../server/model/connection_manager"
+require_relative "../server/model/user"
+require_relative "../server/model/form"
+require_relative "../server/config_manager"
+require_relative "../server/odkbuild_server"
 
 ENV['RACK_ENV'] = "test"
 ConfigManager.load

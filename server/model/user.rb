@@ -1,10 +1,10 @@
 # encoding: UTF-8
 
 require 'json'
+require "digest/sha1"
 
-require './server/model/connection_manager'
-require './server/lib/extensions'
-require 'digest/sha1'
+require_relative "./connection_manager"
+require_relative "../lib/extensions"
 
 class User
   def self.find(username)

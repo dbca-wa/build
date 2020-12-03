@@ -1,16 +1,13 @@
 require 'rubygems'
 require 'bundler/setup'
-
 require 'rack'
 
-require './server/tls_odkbuild'
-require './server/warden_odkbuild'
-
-require './server/model/connection_manager'
-require './server/config_manager'
-require './server/asset_manager'
-
-require './server/odkbuild_server'
+require_relative './server/tls_odkbuild'
+require_relative './server/warden_odkbuild'
+require_relative './server/model/connection_manager'
+require_relative './server/config_manager'
+require_relative './server/asset_manager'
+require_relative './server/odkbuild_server'
 
 # load configuration files
 ConfigManager.load

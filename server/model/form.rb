@@ -2,8 +2,8 @@
 
 require 'json'
 
-require './server/model/connection_manager'
-require './server/lib/extensions'
+require_relative "./connection_manager"
+require_relative "../lib/extensions"
 
 class Form
   def self.find(uid)

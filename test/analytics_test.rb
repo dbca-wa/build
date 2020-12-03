@@ -1,4 +1,4 @@
-require "test_helper"
+require_relative "./test_helper"
 
 context "analytics" do
   setup do

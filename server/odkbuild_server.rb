@@ -11,9 +11,9 @@ require 'net/https'
 require 'net/http/digest_auth'
 require './server/lib/multipart'
 
-require './server/model/user'
-require './server/model/form'
-require './server/model/connection_manager'
+require_relative './model/user'
+require_relative './model/form'
+require_relative './model/connection_manager'
 
 class OdkBuild < Sinatra::Application
   disable :run
