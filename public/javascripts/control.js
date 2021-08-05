@@ -95,9 +95,15 @@
         else
         {
             $headline.children('.controlLabel').text($.emptyString(properties.label.value[odkmaker.i18n.displayLanguage()], '[no caption text yet]'));
-            $headline.children('.controlShort').text(properties.short.value[odkmaker.i18n.displayLanguage()]);
-            $headline.children('.controlHint').text(properties.hint.value[odkmaker.i18n.displayLanguage()]);
-            $headline.children('.controlGuidance').text(properties.guidance.value[odkmaker.i18n.displayLanguage()]);
+            $headline.children('.controlHint').text(properties.hint.value[odkmaker.i18n.displayLanguage()], '');
+
+            // short and guidance are optional
+            if (properties.short && properties.short.value) {
+              $headline.children('.controlShort').text(properties.short.value[odkmaker.i18n.displayLanguage()], '');
+            };
+            if (properties.guidance && properties.guidance.value) {
+            $headline.children('.controlGuidance').text(properties.guidance.value[odkmaker.i18n.displayLanguage()], '');
+            };
             // Here we could indicate the presence of media labels, although their resource files are external to ODK Build
         }
 
